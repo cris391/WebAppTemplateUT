@@ -1,11 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div align=center>
-  <button id="startRecorder" >Start recording</button>
-  <br>
-  <button id="stopRecorder" (click)="clickMe()">Stop recording</button>
+  <button id="startRecorder" (click)="startRecorder()">Start recording</button>
   <br>
   <button id="isExtensionInstalled" (click)="isExtensionInstalled()">Check if extension is installed</button>
   
-  
+  <router-outlet></router-outlet>
 </div>
 
