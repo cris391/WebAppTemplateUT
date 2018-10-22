@@ -35,10 +35,6 @@ export class AppComponent {
 
   public isExtensionInstalled() {
     chrome.runtime.sendMessage(this.extensionId, { isRecordingExtensionInstalled: false }, function (response) {
-      if (!response) {
-        console.log('no response');
-        return false;
-      }
       if (!!response.isRecordingExtensionInstalled && response.isRecordingExtensionInstalled === true) {
         console.log('extension is installed :)');
         return true;
