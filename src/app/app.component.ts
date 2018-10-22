@@ -21,10 +21,6 @@ export class AppComponent {
 
   public startRecorder() {
     chrome.runtime.sendMessage(this.extensionId, { isRecordingStarted: false }, function (response) {
-      if (!response) {
-        console.log('no response');
-        return;
-      }
       if (!!response.isRecordingStarted && response.isRecordingStarted === true) {
         console.log('recording has started');
       } else {
